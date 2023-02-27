@@ -1,26 +1,18 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- *_strncpy - function that copies a string
+ * main - check the code
  *
- * @src: The source of strings
- * @dest: The destination of the string
- * @n: The length of int
- *
- * Return: pointer to the resulting string dest
+ * Return: Always 0.
  */
-char *_strncpy(char *dest, char *src, int n)
+int main(void)
 {
-int i;
+	char *str;
+	int len;
 
-	for (i = 0; i < n && *(src + i); i++)
-	{
-		*(dest + i) = *(src + i);
-	}
-	for (; i < n; i++)
-	{
-	*(dest + i) = '\0';
-	}
-	return (dest);
-
+	str = "My first strlen!";
+	len = _strlen(str);
+	printf("%d\n", len);
+	return (0);
 }
