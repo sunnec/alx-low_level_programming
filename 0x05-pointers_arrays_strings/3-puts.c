@@ -1,26 +1,20 @@
 #include "main.h"
+
 /**
- * _strcmp - compare 2 string
- * @s1:string
- * @s2:strmp
- * Return:int
- * Bwave/ Bright
+ * _puts - function that prints a string
+ *
+ * @str: string to be printed
+ *
+ * Return: length of string
  */
-int _strcmp(char *s1, char *s2)
+void _puts(char *str)
 {
-	while (((*s1 != '\0') && (*s2 != '\0')) && (*s1 == *s2))
-	{
-		s1++;
-		s2++;
-	}
+	int c = 0;
 
-	if (*s1 == *s2)
+	while (str[c] != '\0')
 	{
-		return (0);
+		_putchar(str[c]);
+		c++;
 	}
-
-	else
-	{
-		return (*s1 - *s2);
-	}
+	_putchar('\n');
 }
